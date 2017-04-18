@@ -80,7 +80,7 @@ else:
 noise_h, noise_h2, noise_py_x = model(X, w_h, w_h2, w_o, 0.2, 0.5)
 # Use all-weights model for prediction
 h, h2, py_x = model(X, w_h, w_h2, w_o, 0., 0.)
-y_x = T.max(py_x, axis=1)
+y_x = T.argmax(py_x, axis=1)
 
 # Define cost and update theano expressions
 
